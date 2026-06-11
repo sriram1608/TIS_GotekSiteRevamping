@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Remix: Gotek Website",
+  "description": "High-fidelity structural replica of the Gotek Systems digital-to-physical procurement platform under the premium editorial light theme.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
