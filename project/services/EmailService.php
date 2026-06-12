@@ -12,8 +12,8 @@ class EmailService
 
     // ── SMTP credentials ────────────────────────────────────────────────────
     private $smtpHost   = 'smtp.gmail.com';
-    private $smtpUser   = 'harihara123454@gmail.com';   // update if needed
-    private $smtpPass   = 'ufuwnvselwgvriev';            // Gmail App Password
+    private $smtpUser   = 'k7431351@gmail.com';   // update if needed
+    private $smtpPass   = 'gwpcmwxwewnnazfd';            // Gmail App Password
     private $smtpPort   = 587;
     private $smtpSecure = PHPMailer::ENCRYPTION_STARTTLS;
     private $fromName   = 'GOTEK Careers';
