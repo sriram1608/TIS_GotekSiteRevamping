@@ -55,7 +55,9 @@ export default function CareersApply() {
     // Always send only the clean title to the backend
     const cleanPosition = extractPositionTitle(position);
 
-    fetch("http://localhost:8000/api/careers/apply/index.php", {
+    const apiUrl = import.meta.env.VITE_API_BASE_URL || "http://localhost:8000";
+
+    fetch(`${apiUrl}/api/careers/apply/index.php`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
