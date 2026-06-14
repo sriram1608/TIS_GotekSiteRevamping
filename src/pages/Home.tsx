@@ -5,11 +5,11 @@ import { Printer, Monitor, ArrowRight, Shield, Sparkles, CheckCircle2 } from "lu
 
 export default function Home() {
   return (
-    <div 
+    <div
       id="gotek-home-root"
       className="w-full min-h-screen pt-24 flex flex-col lg:flex-row overflow-hidden bg-zinc-950 font-sans"
     >
-      
+
       {/* PANEL 1: Printing Solutions - Highlighting Blue theme */}
       <motion.div
         data-cursor="view"
@@ -35,9 +35,9 @@ export default function Home() {
           <div className="p-3.5 bg-blue-600 rounded-none mb-1 shadow-lg">
             <Printer className="w-8 h-8 text-white animate-pulse" />
           </div>
-          
+
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-none">
-            Printing and Corporate <span className="text-blue-400">Solution</span>
+            Printing and Corporate <span className="text-blue-400">Gifting</span>
           </h2>
 
           <p className="text-sm text-zinc-300 leading-relaxed font-light mt-1">
@@ -96,7 +96,7 @@ export default function Home() {
           <div className="p-3.5 bg-red-600 rounded-none mb-1 shadow-lg">
             <Monitor className="w-8 h-8 text-white" />
           </div>
-          
+
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-none">
             IT & Software <span className="text-red-400">Solutions</span>
           </h2>
@@ -129,7 +129,7 @@ export default function Home() {
           </Link>
         </div>
       </motion.div>
-      
+
     </div>
   );
 }

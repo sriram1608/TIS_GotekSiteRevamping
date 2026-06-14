@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { 
-  Monitor, 
-  Settings, 
-  CheckCircle, 
-  Activity, 
-  Play, 
-  Palette, 
-  Type, 
-  QrCode, 
-  ChevronRight, 
-  Clock, 
-  Phone, 
-  Mail, 
-  User, 
+import {
+  Monitor,
+  Settings,
+  CheckCircle,
+  Activity,
+  Play,
+  Palette,
+  Type,
+  QrCode,
+  ChevronRight,
+  Clock,
+  Phone,
+  Mail,
+  User,
   Database,
   Sliders,
   Sparkles,
@@ -32,7 +32,7 @@ interface SoftwareServiceNode {
 }
 
 export default function ITSolutions() {
-  
+
   // Orbit angle state
   const [hoveredNodeId, setHoveredNodeId] = useState<string | null>(null);
   const [orbitAngle, setOrbitAngle] = useState(0);
@@ -47,31 +47,31 @@ export default function ITSolutions() {
 
   // 2 Core Software Services
   const services: SoftwareServiceNode[] = [
-    { 
-      id: "ser-sac", 
-      number: "S01", 
-      name: "SAC - Smart AI Campus", 
-      subtext: "Intelligent RFID logins & campus flow tracking", 
+    {
+      id: "ser-sac",
+      number: "S01",
+      name: "SAC - Smart AI Campus",
+      subtext: "Intelligent RFID logins & campus flow tracking",
       description: "A comprehensive control system designed for academic and corporate campuses. Integrates automated attendance, RFID card scanners, and live check-in telemetry fields into a unified digital station.",
       benefits: [
         "Instant RFID-backed check-in logs",
         "Secure micro-credential administration",
         "Pre-integrated visitor flow monitors"
       ],
-      icon: <Database className="w-5 h-5" /> 
+      icon: <Database className="w-5 h-5" />
     },
-    { 
-      id: "ser-ecomm", 
-      number: "S02", 
-      name: "E-Commerce", 
-      subtext: "White-labeled school & corporate online stores", 
+    {
+      id: "ser-ecomm",
+      number: "S02",
+      name: "E-Commerce",
+      subtext: "White-labeled school & corporate online stores",
       description: "Highly optimized customer webstores built for school uniforms, customized printed lanyards, and credential accessories, enabling fast ordering with pre-negotiated volume limits.",
       benefits: [
         "Custom branded school catalog systems",
         "Bulk invoice processing & express production",
         "Direct synchronization with factory schedules"
       ],
-      icon: <Monitor className="w-5 h-5" /> 
+      icon: <Monitor className="w-5 h-5" />
     }
   ];
 
@@ -110,12 +110,12 @@ export default function ITSolutions() {
 
   return (
     <div id="it-solutions-page" className="gotek-page bg-[#f7f6f1] pt-32 pb-24 px-6 md:px-12 select-none font-sans overflow-x-hidden relative">
-      
+
       {/* Background visual graphics */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full blur-[140px] opacity-[0.03] bg-red-600 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto w-full flex flex-col gap-12 md:gap-16 relative z-10">
-        
+
         {/* UPPER TITLE: SIMPLE WORDING & RED HIGHLIGHT */}
         <div className="max-w-3xl text-left flex flex-col gap-4">
           <span className="text-xs uppercase tracking-[3px] text-red-600 font-bold px-3 py-1 bg-white border border-zinc-200 w-fit">
@@ -131,14 +131,14 @@ export default function ITSolutions() {
 
         {/* SECURE ANALYTICS CYCLE: CIRCLE-STYLE ORBIT DISPLAY */}
         <div className="flex flex-col gap-8">
-          
+
           {/* Header */}
           <div className="max-w-3xl text-left flex flex-col gap-3">
             <span className="text-xs uppercase tracking-[3px] text-red-600 font-bold">
               Software Systems
             </span>
             <h2 className="text-3xl font-black text-zinc-950 tracking-tight leading-none">
-              Offered Software Suite
+              Offered Softwares
             </h2>
             <p className="text-sm text-zinc-500 leading-relaxed font-light mt-1">
               Explore our core suite of proprietary technologies. Hover or tap on any node to review system descriptions, capabilities, and pre-integrated features.
@@ -146,10 +146,10 @@ export default function ITSolutions() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             {/* Left: Beautiful Circle-style dynamic orbit layout */}
             <div className="lg:col-span-6 flex items-center justify-center relative h-[320px] md:h-[340px]">
-              
+
               {/* Center Core Hub Orb */}
               <div className="w-24 h-24 md:w-30 md:h-30 rounded-full bg-white border border-red-600 flex flex-col items-center justify-center text-center shadow-lg relative z-20">
                 <Settings className="w-5 h-5 text-red-600 animate-spin [animation-duration:10s]" />
@@ -186,12 +186,11 @@ export default function ITSolutions() {
                     onClick={() => triggerEnquiry(ser.name)}
                     animate={{ scale: isHovered ? 1.15 : 1, x: "-50%", y: "-50%" }}
                   >
-                    <div 
-                      className={`w-14 h-14 rounded-full flex items-center justify-center border transition-all ${
-                        isHovered 
-                          ? "bg-red-600 border-red-600 text-white shadow-xl" 
-                          : "bg-white border-zinc-200 text-zinc-650 hover:border-zinc-400"
-                      }`}
+                    <div
+                      className={`w-14 h-14 rounded-full flex items-center justify-center border transition-all ${isHovered
+                        ? "bg-red-600 border-red-600 text-white shadow-xl"
+                        : "bg-white border-zinc-200 text-zinc-650 hover:border-zinc-400"
+                        }`}
                     >
                       {ser.icon}
                     </div>
@@ -210,17 +209,15 @@ export default function ITSolutions() {
                     onMouseEnter={() => setHoveredNodeId(ser.id)}
                     onMouseLeave={() => setHoveredNodeId(null)}
                     onClick={() => triggerEnquiry(ser.name)}
-                    className={`p-5 border transition-all duration-300 flex flex-col gap-3.5 cursor-pointer ${
-                      isSelected 
-                        ? "bg-white border-red-600 shadow-md translate-x-1.5" 
-                        : "bg-white/40 border-zinc-200 hover:border-zinc-300"
-                    }`}
+                    className={`p-5 border transition-all duration-300 flex flex-col gap-3.5 cursor-pointer ${isSelected
+                      ? "bg-white border-red-600 shadow-md translate-x-1.5"
+                      : "bg-white/40 border-zinc-200 hover:border-zinc-300"
+                      }`}
                   >
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-4">
-                        <div className={`p-2.5 border transition-colors ${
-                          isSelected ? "bg-red-600 text-white border-red-600" : "bg-neutral-100 text-zinc-500 border-zinc-250"
-                        }`}>
+                        <div className={`p-2.5 border transition-colors ${isSelected ? "bg-red-600 text-white border-red-600" : "bg-neutral-100 text-zinc-500 border-zinc-250"
+                          }`}>
                           {ser.icon}
                         </div>
                         <div className="flex flex-col">
@@ -280,9 +277,9 @@ export default function ITSolutions() {
 
         {/* BOTTOM SECTION: REDIRECT ENQUIRY FORM */}
         <div id="enquiry-form-section" className="max-w-2xl mx-auto w-full text-left">
-          
+
           <div className="bg-white border border-zinc-200 p-6 md:p-10 shadow-sm relative">
-            
+
             <button
               id="enquiry-help-badge"
               className="absolute top-4 right-4 bg-red-50 border border-red-150 text-red-600 text-[9px] font-mono px-3 py-1 font-bold tracking-wider"
@@ -308,7 +305,7 @@ export default function ITSolutions() {
               </div>
             ) : (
               <form onSubmit={handleEnquirySubmit} className="flex flex-col gap-4">
-                
+
                 {/* Name */}
                 <div className="flex flex-col gap-1.5 font-sans">
                   <label className="text-[11px] font-bold text-zinc-700 flex items-center gap-1">

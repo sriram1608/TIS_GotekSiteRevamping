@@ -44,12 +44,12 @@ export default function About() {
 
   return (
     <div id="gotek-about-root" className="gotek-page bg-[#f7f6f1] pt-32 pb-24 px-6 md:px-12 select-none font-sans relative">
-      
+
       {/* Background Subtle Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-zinc-100/50 to-[#f7f6f1] pointer-events-none z-0" />
 
       <div className="max-w-7xl mx-auto w-full relative z-[1] flex flex-col gap-24 md:gap-32">
-        
+
         {/* SECTION 1: Intro Section (Replaced 'Engineering Digital and Physical Integrity') */}
         <div className="text-center max-w-4xl mx-auto flex flex-col items-center gap-5">
           <ScrollReveal delay={0.1} id="about-intro-tag">
@@ -84,7 +84,7 @@ export default function About() {
             {/* Printing Solutions Box */}
             <ScrollReveal direction="left" id="about-wwd-mfg">
               <Link to="/manufacturing" className="block h-full group" data-cursor="pointer">
-                <motion.div 
+                <motion.div
                   whileHover={{ y: -6 }}
                   className="bg-white border border-zinc-200 p-8 md:p-10 hover:border-blue-600 hover:shadow-md transition-all duration-300 flex flex-col gap-5 text-left shadow-sm h-full"
                 >
@@ -92,7 +92,7 @@ export default function About() {
                     <Printer className="w-7 h-7" />
                   </div>
                   <h3 className="text-xl md:text-2xl font-black text-blue-600 tracking-tight">
-                    Printing and Corporate Solution
+                    Printing and Corporate Gifting
                   </h3>
                   <p className="text-sm text-zinc-650 leading-relaxed font-light">
                     We create custom ID cards, RFID access cards, and personalized lanyards for businesses. With all printing done in-house, we deliver quality products at affordable prices with fast delivery.
@@ -104,7 +104,7 @@ export default function About() {
             {/* IT & Software Solutions Box */}
             <ScrollReveal direction="right" id="about-wwd-it">
               <Link to="/it-solutions" className="block h-full group" data-cursor="pointer">
-                <motion.div 
+                <motion.div
                   whileHover={{ y: -6 }}
                   className="bg-white border border-zinc-200 hover:border-red-600 hover:shadow-md transition-all duration-300 flex flex-col gap-5 text-left shadow-sm h-full p-8 md:p-10"
                 >
@@ -201,7 +201,7 @@ export default function About() {
 
           {/* High-fidelity Google Reviews dashboard */}
           <div className="bg-white border border-zinc-200 p-8 md:p-12 shadow-sm flex flex-col gap-10 text-left">
-            
+
             {/* Top Score Summary Banner */}
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 border-b border-zinc-150 pb-8">
               <div className="flex items-center gap-4">
@@ -230,8 +230,8 @@ export default function About() {
             {/* Reviews list grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {googleReviews.map((rev) => (
-                <div 
-                  key={rev.id} 
+                <div
+                  key={rev.id}
                   className="p-6 bg-[#fcfbfa] border border-zinc-200 hover:border-blue-600 transition-all flex flex-col justify-between gap-6 hover:shadow-xs"
                 >
                   <p className="text-xs text-zinc-650 leading-relaxed font-normal italic">
