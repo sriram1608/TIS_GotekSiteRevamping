@@ -11,7 +11,7 @@ export default function Clients() {
       <div className="absolute inset-0 bg-gradient-to-b from-bg-dark via-white/20 to-bg-dark pointer-events-none z-0" />
 
       <div className="max-w-7xl mx-auto w-full relative z-10 flex flex-col gap-24">
-        
+
         {/* Header section */}
         <div className="max-w-4xl flex flex-col gap-4 text-left">
           <ScrollReveal id="clients-tag">
@@ -19,10 +19,10 @@ export default function Clients() {
               [Gotek Compliance & Partners]
             </span>
           </ScrollReveal>
-          
+
           <ScrollReveal delay={0.1} id="clients-title">
             <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-zinc-900 leading-[0.95]">
-              Trust Correlation <span className="text-accent">Networks</span>
+              Our Valued <span className="text-accent">Clientele</span>
             </h1>
           </ScrollReveal>
 
@@ -37,22 +37,22 @@ export default function Clients() {
         <div className="flex flex-col gap-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {CLIENT_PARTNERS.map((partner, idx) => (
-              <ScrollReveal 
-                key={partner.name} 
-                delay={idx * 0.04} 
-                direction="up" 
+              <ScrollReveal
+                key={partner.name}
+                delay={idx * 0.04}
+                direction="up"
                 id={`partner-card-${idx}`}
               >
-                <TiltCard 
+                <TiltCard
                   id={`p-tilt-${idx}`}
                   className="group relative bg-white border border-zinc-900 h-44 flex flex-col items-center justify-center p-6 rounded-lg select-none cursor-pointer"
                 >
                   {/* Corporate Logo rendered with original colors */}
-                  <motion.div 
+                  <motion.div
                     className="w-full h-full flex items-center justify-center p-2"
                   >
-                    <img 
-                      src={partner.image} 
+                    <img
+                      src={partner.image}
                       alt={partner.name}
                       className="max-w-full max-h-full object-contain select-none pointer-events-none transition-transform duration-350 group-hover:scale-105"
                     />

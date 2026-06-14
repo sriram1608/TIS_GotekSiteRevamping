@@ -52,22 +52,14 @@ export default function Careers() {
         </ScrollReveal>
       </div>
 
-      {/* SECTION 2 & 3: 50/50 Split-Screen Dashboard */}
-      <div className="w-full flex flex-col lg:flex-row min-h-screen border-t border-zinc-200 relative overflow-hidden bg-[#fafafa]">
+      {/* SECTION 2: Parallel Columns (Printing & IT side-by-side) */}
+      <div className="max-w-7xl mx-auto w-full px-6 md:px-12 lg:px-16 pb-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
         
-        {/* Center blend visual glow */}
-        <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-64 -translate-x-1/2 bg-gradient-to-r from-blue-500/3 via-purple-500/3 to-red-500/3 blur-3xl pointer-events-none z-10" />
-
-        {/* Modern Glassmorphic vertical divider with glowing gradient */}
-        <div className="hidden lg:flex absolute left-1/2 top-0 bottom-0 w-[6px] -translate-x-1/2 flex-col justify-between items-center bg-gradient-to-b from-blue-500/20 via-purple-500/20 to-red-500/20 pointer-events-none z-10 backdrop-blur-[4px] border-l border-r border-white/5">
-          {/* Glowing accent track */}
-          <div className="absolute inset-0 bg-gradient-to-b from-blue-500/30 via-purple-500/40 to-red-500/30 w-[1px] left-1/2 -translate-x-1/2" />
-          {/* Moving / pulsing glowing light point */}
-          <div className="absolute top-1/4 bottom-1/4 left-1/2 -translate-x-1/2 w-[8px] bg-gradient-to-b from-blue-400 via-purple-400 to-red-400 blur-[3px] opacity-50 animate-pulse" />
-        </div>
-
-        {/* LEFT COLUMN: Printing & Corporate Solutions (Dark Theme) */}
-        <div className="w-full lg:w-1/2 bg-gradient-to-br from-[#0c0f1d] via-[#111728] to-[#17203a] px-6 md:px-12 lg:px-16 py-20 flex flex-col gap-10 text-white text-left relative z-2">
+        {/* LEFT CARD: Printing & Corporate Solutions (Dark Theme) */}
+        <div className="bg-gradient-to-br from-[#0c0f1d] via-[#111728] to-[#17203a] p-6 md:p-10 border border-zinc-800 rounded-3xl shadow-xl text-white text-left relative overflow-hidden flex flex-col gap-8">
+          {/* Animated subtle glow */}
+          <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full blur-[120px] opacity-[0.05] bg-blue-600 pointer-events-none" />
+          
           <ScrollReveal id="careers-printing-header">
             <div className="flex items-center gap-3 border-b border-zinc-800 pb-4">
               <div className="p-2.5 bg-blue-950/50 border border-blue-900 text-blue-400 rounded-xl">
@@ -84,7 +76,7 @@ export default function Careers() {
             </div>
           </ScrollReveal>
 
-          <div className="flex flex-col gap-6 w-full">
+          <div className="flex flex-col gap-6 w-full animate-fade-in">
             {corporateJobs.map((job, idx) => (
               <ScrollReveal key={job.id} delay={idx * 0.05} id={`printing-job-reveal-${job.id}`} className="w-full">
                 <div 
@@ -124,8 +116,11 @@ export default function Careers() {
           </div>
         </div>
 
-        {/* RIGHT COLUMN: IT & Software Solutions (Light Theme) */}
-        <div className="w-full lg:w-1/2 bg-gradient-to-br from-[#f8fafc] via-[#f1f5f9] to-[#e4e9f3] px-6 md:px-12 lg:px-16 py-20 flex flex-col gap-10 text-zinc-900 text-left relative z-2">
+        {/* RIGHT CARD: IT & Software Solutions (Light Theme) */}
+        <div className="bg-gradient-to-br from-[#f8fafc] via-[#f1f5f9] to-[#e4e9f3] p-6 md:p-10 border border-zinc-200 rounded-3xl shadow-md text-zinc-900 text-left relative overflow-hidden flex flex-col gap-8">
+          {/* Animated subtle glow */}
+          <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full blur-[120px] opacity-[0.03] bg-red-600 pointer-events-none" />
+
           <ScrollReveal id="careers-it-header">
             <div className="flex items-center gap-3 border-b border-zinc-200 pb-4">
               <div className="p-2.5 bg-red-50 border border-red-200 text-red-600 rounded-xl">
@@ -142,7 +137,7 @@ export default function Careers() {
             </div>
           </ScrollReveal>
 
-          <div className="flex flex-col gap-6 w-full">
+          <div className="flex flex-col gap-6 w-full animate-fade-in">
             {itJobs.map((job, idx) => (
               <ScrollReveal key={job.id} delay={idx * 0.05} id={`it-job-reveal-${job.id}`} className="w-full">
                 <div 

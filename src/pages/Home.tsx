@@ -16,7 +16,7 @@ export default function Home() {
         initial={{ x: "-100%", opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ type: "spring", damping: 30, stiffness: 70 }}
-        className="relative flex-1 group overflow-hidden border-b lg:border-b-0 lg:border-r border-zinc-800 min-h-[50vh] lg:min-h-screen flex flex-col justify-end p-8 md:p-14 lg:p-16"
+        className="relative flex-1 group overflow-hidden border-b lg:border-b-0 lg:border-r border-zinc-800 min-h-[50vh] lg:min-h-screen flex flex-col justify-start p-8 md:p-14 lg:p-16"
       >
         {/* Animated Printing Press/Material Background */}
         <motion.div
@@ -27,13 +27,13 @@ export default function Home() {
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
         />
-        {/* Balanced Gradient Overlay for beautiful visibility and clean text contrast */}
-        <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/70 to-transparent z-[1]" />
+        {/* Balanced Gradient Overlay for beautiful visibility and clean text contrast at the top */}
+        <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/90 via-zinc-950/50 to-zinc-950 z-[1]" />
 
         {/* Content area */}
         <div className="relative z-[2] flex flex-col items-start gap-4 text-white max-w-lg">
           <div className="p-3.5 bg-blue-600 rounded-none mb-1 shadow-lg">
-            <Printer className="w-8 h-8 text-white animate-pulse" />
+            <Printer className="w-8 h-8 text-white" />
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-none">
@@ -91,15 +91,19 @@ export default function Home() {
         initial={{ x: "100%", opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ type: "spring", damping: 30, stiffness: 70 }}
-        className="relative flex-1 group overflow-hidden min-h-[50vh] lg:min-h-screen flex flex-col justify-end p-8 md:p-14 lg:p-16"
+        className="relative flex-1 group overflow-hidden min-h-[50vh] lg:min-h-screen flex flex-col justify-start p-8 md:p-14 lg:p-16"
       >
-        {/* White-to-black vertical gradient background */}
-        <div
-          className="absolute inset-0"
-          style={{ background: 'linear-gradient(to bottom, #ffffff 0%, #888888 45%, #000000 100%)' }}
+        {/* Animated IT/Software Background */}
+        <motion.div
+          className="absolute inset-0 bg-cover bg-center opacity-85 group-hover:opacity-95 transition-opacity"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&auto=format&fit=crop&q=80')`,
+          }}
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
         />
-        {/* Gradient overlay — reinforces deep black at bottom for text contrast */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent z-[1]" />
+        {/* Balanced Gradient Overlay for beautiful visibility and clean text contrast at the top */}
+        <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/90 via-zinc-950/50 to-zinc-950 z-[1]" />
 
         {/* Content area */}
         <div className="relative z-[2] flex flex-col items-start gap-4 text-white max-w-lg">
