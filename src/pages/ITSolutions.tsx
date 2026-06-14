@@ -38,18 +38,31 @@ export default function ITSolutions() {
   const [orbitAngle, setOrbitAngle] = useState(0);
 
   // Enquiry Form State
-  const [enquirySoftware, setEnquirySoftware] = useState("SAC - Smart AI Campus");
+  const [enquirySoftware, setEnquirySoftware] = useState("ID Card and Lanyard Cropping Tool");
   const [enquiryName, setEnquiryName] = useState("");
   const [enquiryMobile, setEnquiryMobile] = useState("");
   const [enquiryEmail, setEnquiryEmail] = useState("");
   const [enquiryTime, setEnquiryTime] = useState("09:00 AM - 12:00 PM");
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  // 2 Core Software Services
+  // 3 Core Software Services
   const services: SoftwareServiceNode[] = [
     {
-      id: "ser-sac",
+      id: "ser-idcard",
       number: "S01",
+      name: "ID Card and Lanyard Cropping Tool",
+      subtext: "Advanced ID photo cropping & lanyard preparation",
+      description: "Advanced ID card photo cropping, resizing, alignment, and lanyard preparation tool for educational institutions and organizations.",
+      benefits: [
+        "Precision photo cropping & auto-alignment",
+        "Bulk batch processing for large institutions",
+        "Lanyard-ready export with bleed & trim marks"
+      ],
+      icon: <Printer className="w-5 h-5" />
+    },
+    {
+      id: "ser-sac",
+      number: "S02",
       name: "SAC - Smart AI Campus",
       subtext: "Intelligent RFID logins & campus flow tracking",
       description: "A comprehensive control system designed for academic and corporate campuses. Integrates automated attendance, RFID card scanners, and live check-in telemetry fields into a unified digital station.",
@@ -62,7 +75,7 @@ export default function ITSolutions() {
     },
     {
       id: "ser-ecomm",
-      number: "S02",
+      number: "S03",
       name: "E-Commerce",
       subtext: "White-labeled school & corporate online stores",
       description: "Highly optimized customer webstores built for school uniforms, customized printed lanyards, and credential accessories, enabling fast ordering with pre-negotiated volume limits.",
@@ -330,6 +343,7 @@ export default function ITSolutions() {
                     onChange={(e) => setEnquirySoftware(e.target.value)}
                     className="w-full bg-zinc-50 border border-zinc-200 p-3.5 text-xs text-zinc-900 focus:outline-none focus:border-red-600 focus:bg-white"
                   >
+                    <option value="ID Card and Lanyard Cropping Tool">ID Card and Lanyard Cropping Tool</option>
                     <option value="SAC - Smart AI Campus">SAC - Smart AI Campus</option>
                     <option value="E-Commerce">E-Commerce</option>
                   </select>
