@@ -289,7 +289,7 @@ export default function ITSolutions() {
 
             <div className="mb-6 flex flex-col gap-1.5">
               <span className="text-xs uppercase font-bold text-red-600">Immediate Request</span>
-              <h3 className="text-xl md:text-2xl font-black text-zinc-900 leading-none">Register Software Enquiry</h3>
+              <h3 className="text-xl md:text-2xl font-black text-zinc-900 leading-none">Software Enquiry</h3>
               <p className="text-xs text-zinc-410 leading-relaxed font-light mt-1">
                 Fill in the coordination parameters below. Our software design hub will reach back within 2 business hours.
               </p>

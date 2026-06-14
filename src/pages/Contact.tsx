@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Send, 
-  ArrowRight, 
-  CheckCircle2, 
-  FileCheck, 
-  Building, 
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Send,
+  ArrowRight,
+  CheckCircle2,
+  FileCheck,
+  Building,
   AlertCircle
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
@@ -44,7 +44,7 @@ export default function Contact() {
   return (
     <div id="gotek-contact-root" className="gotek-page bg-[#f7f6f1] pt-32 pb-24 px-6 md:px-12 font-sans overflow-x-hidden">
       <div className="max-w-7xl mx-auto w-full flex flex-col gap-12 relative z-10">
-        
+
         {/* Title head banner */}
         <div className="border-b border-zinc-200 pb-8 flex flex-col md:flex-row md:items-end justify-between gap-4">
           <ScrollReveal id="contact-breadcrumbs-title">
@@ -64,7 +64,7 @@ export default function Contact() {
 
         {/* Info & form blocks split */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-4 text-left">
-          
+
           {/* Left: Contact Info card */}
           <div className="lg:col-span-5 flex flex-col gap-6">
             <ScrollReveal id="contact-left-tag">
@@ -81,7 +81,7 @@ export default function Contact() {
 
                 <div className="flex flex-col">
                   <h3 className="font-sans text-lg font-bold text-zinc-900">
-                    Gotek Systems Limited
+                    Golden Tech
                   </h3>
                   <span className="text-xs text-zinc-400 mt-1">Corporate Office & Manufacturing HQ</span>
                 </div>
@@ -162,7 +162,7 @@ export default function Contact() {
                 ) : (
                   /* Form structure */
                   <form onSubmit={handleContactSubmit} className="flex flex-col gap-4">
-                    
+
                     <div className="flex flex-col gap-1.5">
                       <span className="font-mono text-[9px] text-blue-600 font-bold tracking-widest leading-none">REGISTRATION PROTOCOL</span>
                       <h3 className="font-sans text-xl font-bold text-zinc-900">
