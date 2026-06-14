@@ -22,7 +22,7 @@ export default function Contact() {
   const [sendingState, setSendingState] = useState<"IDLE" | "SENDING" | "SUCCESS">("IDLE");
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  const handleContactSubmit = (e: React.FormEvent) => {
+  const handleContactSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrorMessage(null);
 
@@ -32,13 +32,36 @@ export default function Contact() {
     }
 
     setSendingState("SENDING");
-    setTimeout(() => {
-      setSendingState("SUCCESS");
-      setFullName("");
-      setPhone("");
-      setEmail("");
-      setMessage("");
-    }, 1500);
+    try {
+      const response = await fetch('/api/contact/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          fullName,
+          phone,
+          email,
+          message
+        })
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        setSendingState("SUCCESS");
+        setFullName("");
+        setPhone("");
+        setEmail("");
+        setMessage("");
+      } else {
+        setSendingState("IDLE");
+        setErrorMessage(result.message || "Failed to submit inquiry. Please try again.");
+      }
+    } catch (error) {
+      setSendingState("IDLE");
+      setErrorMessage("Network error. Please check your connection and try again.");
+    }
   };
 
   return (

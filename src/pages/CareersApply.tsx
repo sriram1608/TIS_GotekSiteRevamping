@@ -110,7 +110,7 @@ export default function CareersApply() {
                 <CheckCircle2 className="w-10 h-10 animate-bounce" />
               </div>
               <h2 className="font-display text-2xl md:text-3xl font-black text-zinc-900 tracking-tight leading-none">
-                Application Received
+                Application Sent
               </h2>
               <p className="font-sans text-sm text-zinc-650 max-w-sm leading-relaxed">
                 We have registered your application for{" "}

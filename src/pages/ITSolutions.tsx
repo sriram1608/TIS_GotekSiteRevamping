@@ -44,6 +44,8 @@ export default function ITSolutions() {
   const [enquiryEmail, setEnquiryEmail] = useState("");
   const [enquiryTime, setEnquiryTime] = useState("09:00 AM - 12:00 PM");
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   // 3 Core Software Services
   const services: SoftwareServiceNode[] = [
@@ -106,19 +108,48 @@ export default function ITSolutions() {
     }
   };
 
-  const handleEnquirySubmit = (e: React.FormEvent) => {
+  const handleEnquirySubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!enquiryName || !enquiryMobile || !enquiryEmail) {
-      alert("Please fill in all required enquiry parameters.");
+      setErrorMessage("Please fill in all required enquiry parameters.");
       return;
     }
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setEnquiryName("");
-      setEnquiryMobile("");
-      setEnquiryEmail("");
-    }, 5000);
+
+    setIsLoading(true);
+    setErrorMessage("");
+
+    try {
+      const response = await fetch("/api/software-enquiry/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: enquiryName,
+          mobile: enquiryMobile,
+          email: enquiryEmail,
+          software: enquirySoftware,
+          time: enquiryTime,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setIsSubmitted(true);
+        setTimeout(() => {
+          setIsSubmitted(false);
+          setEnquiryName("");
+          setEnquiryMobile("");
+          setEnquiryEmail("");
+          setErrorMessage("");
+        }, 5000);
+      } else {
+        setErrorMessage(result.message || "Unable to process enquiry. Please try again.");
+      }
+    } catch {
+      setErrorMessage("Network error. Please check your connection and try again.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -311,7 +342,7 @@ export default function ITSolutions() {
             {isSubmitted ? (
               <div className="py-10 text-center flex flex-col items-center gap-3">
                 <CheckCircle className="w-12 h-12 text-emerald-500 animate-bounce" />
-                <h4 className="text-lg font-bold text-zinc-900">Enquiry Registered Securely</h4>
+                <h4 className="text-lg font-bold text-zinc-900">Enquiry Sent</h4>
                 <p className="text-xs text-zinc-500 max-w-sm">
                   We've logged your credentials. A support liaison will touch base regarding your chosen software: <span className="font-bold text-red-600">{enquirySoftware}</span>.
                 </p>
@@ -399,11 +430,18 @@ export default function ITSolutions() {
                   </select>
                 </div>
 
+                {errorMessage && (
+                  <p className="text-xs text-red-600 bg-red-50 border border-red-200 px-4 py-2.5 font-medium">
+                    {errorMessage}
+                  </p>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full py-4 bg-red-600 hover:bg-red-700 text-white font-sans text-xs font-bold uppercase tracking-[2px] transition-all duration-300 text-center mt-3"
+                  disabled={isLoading}
+                  className="w-full py-4 bg-red-600 hover:bg-red-700 disabled:opacity-60 disabled:cursor-not-allowed text-white font-sans text-xs font-bold uppercase tracking-[2px] transition-all duration-300 text-center mt-3"
                 >
-                  Submit Software Enquiry
+                  {isLoading ? "Submitting…" : "Submit Software Enquiry"}
                 </button>
 
               </form>

@@ -87,7 +87,7 @@ class EmailService
             '[Applicant Name]'  => $toName,
             '[Applicant Email]' => $toEmail,
             '[Position Name]'   => $position,
-            '[Date]'            => date('d M Y'),
+            '[Date]'            => date('d M Y, h:i A'),
         ];
 
         return $this->dispatch(
@@ -112,7 +112,7 @@ class EmailService
             '[Position Name]'   => htmlspecialchars($data['position']     ?? '', ENT_QUOTES, 'UTF-8'),
             '[Resume URL]'      => htmlspecialchars($data['resume_url']   ?? 'N/A', ENT_QUOTES, 'UTF-8'),
             '[Cover Message]'   => nl2br(htmlspecialchars($data['cover_message'] ?? 'N/A', ENT_QUOTES, 'UTF-8')),
-            '[Date]'            => date('d M Y, H:i'),
+            '[Date]'            => date('d M Y, h:i A'),
         ];
 
         return $this->dispatch(
@@ -242,6 +242,103 @@ class EmailService
             Logger::log("getRecentLogs FAILED: " . $e->getMessage(), "DB_ERROR");
             return [];
         }
+    }
+
+    // ─────────────────────────────────────────────────────────────────────────
+    // Send software enquiry user confirmation email.
+    // ─────────────────────────────────────────────────────────────────────────
+    public function sendSoftwareEnquiryUserEmail(array $data): bool
+    {
+        $replacements = [
+            '[User Name]'    => htmlspecialchars($data['name']      ?? '', ENT_QUOTES, 'UTF-8'),
+            '[Mobile Number]'=> htmlspecialchars($data['mobile']    ?? '', ENT_QUOTES, 'UTF-8'),
+            '[User Email]'   => htmlspecialchars($data['email']     ?? '', ENT_QUOTES, 'UTF-8'),
+            '[Software Name]'=> htmlspecialchars($data['software']  ?? '', ENT_QUOTES, 'UTF-8'),
+            '[Meeting Time]' => htmlspecialchars($data['time']      ?? '', ENT_QUOTES, 'UTF-8'),
+            '[Timestamp]'    => htmlspecialchars($data['timestamp'] ?? '', ENT_QUOTES, 'UTF-8'),
+        ];
+
+        return $this->dispatch(
+            $data['email'],
+            $data['name'],
+            'Software Enquiry Received – GOTEK Printing & Gifting',
+            'software_enquiry_user_email.html',
+            $replacements,
+            'Software Enquiry User Confirmation',
+            null
+        );
+    }
+
+    // ─────────────────────────────────────────────────────────────────────────
+    // Send software enquiry admin notification email.
+    // ─────────────────────────────────────────────────────────────────────────
+    public function sendSoftwareEnquiryAdminEmail(array $data): bool
+    {
+        $replacements = [
+            '[User Name]'    => htmlspecialchars($data['name']      ?? '', ENT_QUOTES, 'UTF-8'),
+            '[User Email]'   => htmlspecialchars($data['email']     ?? '', ENT_QUOTES, 'UTF-8'),
+            '[Mobile Number]'=> htmlspecialchars($data['mobile']    ?? '', ENT_QUOTES, 'UTF-8'),
+            '[Software Name]'=> htmlspecialchars($data['software']  ?? '', ENT_QUOTES, 'UTF-8'),
+            '[Meeting Time]' => htmlspecialchars($data['time']      ?? '', ENT_QUOTES, 'UTF-8'),
+            '[Timestamp]'    => htmlspecialchars($data['timestamp'] ?? '', ENT_QUOTES, 'UTF-8'),
+        ];
+
+        return $this->dispatch(
+            $this->hrEmail,
+            'GOTEK Admin',
+            'New Software Enquiry Submitted',
+            'software_enquiry_admin_email.html',
+            $replacements,
+            'Software Enquiry Admin Notification',
+            null
+        );
+    }
+    // ─────────────────────────────────────────────────────────────────────────
+    // Send contact inquiry user confirmation email.
+    // ─────────────────────────────────────────────────────────────────────────
+    public function sendContactUserEmail(array $data): bool
+    {
+        $replacements = [
+            '[User Name]'      => htmlspecialchars($data['fullName'] ?? '', ENT_QUOTES, 'UTF-8'),
+            '[Phone Number]'   => htmlspecialchars($data['phone']    ?? 'N/A', ENT_QUOTES, 'UTF-8'),
+            '[User Email]'     => htmlspecialchars($data['email']    ?? '', ENT_QUOTES, 'UTF-8'),
+            '[Message]'        => nl2br(htmlspecialchars($data['message']  ?? '', ENT_QUOTES, 'UTF-8')),
+            '[Timestamp]'      => htmlspecialchars($data['timestamp']?? '', ENT_QUOTES, 'UTF-8'),
+        ];
+
+        return $this->dispatch(
+            $data['email'],
+            $data['fullName'],
+            'Inquiry Received – GOTEK Printing & Gifting',
+            'contact_user_email.html',
+            $replacements,
+            'Contact Inquiry User Confirmation',
+            null
+        );
+    }
+
+    // ─────────────────────────────────────────────────────────────────────────
+    // Send contact inquiry admin notification email.
+    // ─────────────────────────────────────────────────────────────────────────
+    public function sendContactAdminEmail(array $data): bool
+    {
+        $replacements = [
+            '[User Name]'      => htmlspecialchars($data['fullName'] ?? '', ENT_QUOTES, 'UTF-8'),
+            '[Phone Number]'   => htmlspecialchars($data['phone']    ?? 'N/A', ENT_QUOTES, 'UTF-8'),
+            '[User Email]'     => htmlspecialchars($data['email']    ?? '', ENT_QUOTES, 'UTF-8'),
+            '[Message]'        => nl2br(htmlspecialchars($data['message']  ?? '', ENT_QUOTES, 'UTF-8')),
+            '[Timestamp]'      => htmlspecialchars($data['timestamp']?? '', ENT_QUOTES, 'UTF-8'),
+        ];
+
+        return $this->dispatch(
+            $this->hrEmail, // assuming admin email uses the same or update if needed
+            'GOTEK Admin',
+            'New Contact Inquiry Submitted',
+            'contact_admin_email.html',
+            $replacements,
+            'Contact Inquiry Admin Notification',
+            null
+        );
     }
 }
 ?>
