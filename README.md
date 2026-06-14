@@ -15,4 +15,5 @@ This contains everything you need to run your app locally.
 
 
 test
-0010012
+
+678945 str
