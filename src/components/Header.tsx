@@ -99,7 +99,7 @@ export default function Header() {
                   className="absolute left-0 top-full pt-4 w-[480px] z-50 pointer-events-auto"
                 >
                   <div className="bg-white border border-zinc-200 p-5 shadow-xl grid grid-cols-2 gap-4">
-                    {/* Printing and Corporate Solution - Blue highlight */}
+                    {/* Printing and Corporate Gifting - Blue highlight */}
                     <Link
                       to="/manufacturing"
                       className="p-4 border border-zinc-100 hover:border-blue-600 hover:bg-zinc-50 transition-all flex flex-col items-start gap-2.5 text-left"
@@ -110,7 +110,7 @@ export default function Header() {
                       </div>
                       <div>
                         <h4 className="font-sans text-sm font-bold text-blue-600 tracking-tight">
-                          Printing and Corporate Solution
+                          Printing and Corporate Gifting
                         </h4>
                         <p className="font-sans text-[11px] text-zinc-500 font-light mt-1 leading-normal">
                           Custom ID cards, lanyard printing, RFID cards, and corporate gifting.
@@ -247,7 +247,7 @@ export default function Header() {
                   to="/manufacturing"
                   className="p-3 border border-zinc-200 hover:border-blue-600 bg-zinc-50 hover:bg-white flex flex-col gap-1"
                 >
-                  <span className="font-sans text-xs font-bold text-blue-600">Printing and Corporate Solution</span>
+                  <span className="font-sans text-xs font-bold text-blue-600">Printing and Corporate Gifting</span>
                 </Link>
                 <Link
                   to="/it-solutions"
