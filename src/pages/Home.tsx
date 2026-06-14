@@ -40,25 +40,39 @@ export default function Home() {
             Printing and Corporate <span className="text-blue-400">Gifting</span>
           </h2>
 
-          <p className="text-sm text-zinc-300 leading-relaxed font-light mt-1">
+          <p className="text-base text-white leading-relaxed font-light mt-1">
             Innovative IT and AI solutions designed to accelerate business growth.
           </p>
 
           {/* Core Priorities Checklist - Printing */}
-          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2 w-full text-left">
-            {[
-              "In-house printing & production",
-              "Printing & corporate gifting",
-              "Smart identity & access badges",
-              "Automated inventory & asset tracking",
-              "UV printing & engraving"
-            ].map((text) => (
-              <li key={text} className="flex items-center gap-2 text-xs text-zinc-300 font-medium">
-                <CheckCircle2 className="w-3.5 h-3.5 text-blue-400 shrink-0" />
-                <span>{text}</span>
-              </li>
-            ))}
-          </ul>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 mt-2 w-full text-left">
+            <ul className="flex flex-col gap-2">
+              {[
+                "Employee Welcome Kits",
+                "Return Gifts",
+                "Awards and Mementos",
+                "Gifts for MSMEs"
+              ].map((text) => (
+                <li key={text} className="flex items-center gap-2 text-xs text-zinc-300 font-medium">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-blue-400 shrink-0" />
+                  <span>{text}</span>
+                </li>
+              ))}
+            </ul>
+            <ul className="flex flex-col gap-2">
+              {[
+                "Sublimation Printing",
+                "UV Printing",
+                "Laser Engraving and Cutting",
+                "Offset Printing"
+              ].map((text) => (
+                <li key={text} className="flex items-center gap-2 text-xs text-zinc-300 font-medium">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-blue-400 shrink-0" />
+                  <span>{text}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
 
           {/* Simple Button Replacement */}
           <Link
