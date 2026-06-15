@@ -146,7 +146,7 @@ export default function About() {
                     Our Vision
                   </h4>
                   <p className="text-xs text-zinc-500 font-light mt-1 leading-relaxed text-justify">
-                    We aspire to revolutionize the landscape of the Indian education system through innovative identification solutions tailored for schools. Our mission is to bolster operational efficiency, prioritize student safety, and catalyze transformative learning experiences. With cutting-edge technology and a commitment to excellence, we envision a future where every educational institution thrives, empowered by our pioneering solutions.
+                    To lead India in organizational innovation, providing every institution and corporate entity the intelligence to manage and the identity—through premium printing and gifting—to inspire.
                   </p>
                 </div>
               </TiltCard>
@@ -163,7 +163,7 @@ export default function About() {
                     Our Mission
                   </h4>
                   <p className="text-xs text-zinc-500 font-light mt-1 leading-relaxed text-justify">
-                    We are dedicated to equipping schools with robust and dependable ID solutions that streamline processes and uphold student safety as paramount. Through the integration of modernized technology and strategic collaborations, we envision serving 1000 schools by 2030 and 5000 schools by 2035. Our ultimate goal is to enrich the educational journey for both students and educators, fostering a conducive environment for growth and success.
+                    To simplify organizational success by merging our AI Division's intelligence with excellence in printing and gifting. We leverage in-house production and SMART technology to deliver seamless, data-driven identity solutions with unmatched precision.
                   </p>
                 </div>
               </TiltCard>
@@ -180,7 +180,10 @@ export default function About() {
                     Our Values
                   </h4>
                   <p className="text-xs text-zinc-500 font-light mt-1 leading-relaxed text-justify">
-                    At our core, we foster a culture of respect for all individuals, recognizing that diversity strengthens our team. We believe in the power of teamwork built on trust and collaboration, where each member's unique strengths contribute to our collective success. Our commitment to efficient, ethical, transparent, and truthful business practices ensures integrity in all our interactions, while our unwavering focus on customer delight drives us to exceed expectations at every turn.
+                    • Respect for all<br /><br />
+                    • Teamwork based on trust &amp; collaboration<br /><br />
+                    • Efficient, ethical, transparent &amp; truthful business practices<br /><br />
+                    • Focus on customer delight
                   </p>
                 </div>
               </TiltCard>

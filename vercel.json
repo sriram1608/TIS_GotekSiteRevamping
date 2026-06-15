@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "package.json", "use": "@vercel/static-build", "config": { "distDir": "dist" } },
+    { "src": "project/api/**/*.php", "use": "@vercel/php" }
+  ],
+  "routes": [
+    { "src": "/api/contact/", "dest": "project/api/contact/index.php" },
+    { "src": "/api/software-enquiry/", "dest": "project/api/software-enquiry/index.php" },
+    { "src": "/api/careers/apply/index.php", "dest": "project/api/careers/apply/index.php" },
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}
