@@ -93,17 +93,15 @@ export default function Home() {
         transition={{ type: "spring", damping: 30, stiffness: 70 }}
         className="relative flex-1 group overflow-hidden min-h-[50vh] lg:min-h-screen flex flex-col justify-start p-8 md:p-14 lg:p-16"
       >
-        {/* Animated IT/Software Background */}
-        <motion.div
-          className="absolute inset-0 bg-cover bg-center opacity-85 group-hover:opacity-95 transition-opacity"
+        {/* Smooth White-to-Black Gradient Background */}
+        <div
+          className="absolute inset-0"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&auto=format&fit=crop&q=80')`,
+            background: 'linear-gradient(to bottom, #FFFFFF 0%, #e0e0e0 15%, #a0a0a0 35%, #505050 55%, #1a1a1a 75%, #000000 100%)',
           }}
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
         />
-        {/* Balanced Gradient Overlay for beautiful visibility and clean text contrast at the top */}
-        <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/90 via-zinc-950/50 to-zinc-950 z-[1]" />
+        {/* Light overlay for text readability without hiding the gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30 z-[1]" />
 
         {/* Content area */}
         <div className="relative z-[2] flex flex-col items-start gap-4 text-white max-w-lg">

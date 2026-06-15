@@ -65,7 +65,7 @@ export default function ITSolutions() {
     {
       id: "ser-sac",
       number: "S02",
-      name: "SAC - Smart AI Campus",
+      name: "SAC - Smart Ai Campus",
       subtext: "Intelligent RFID logins & campus flow tracking",
       description: "A comprehensive control system designed for academic and corporate campuses. Integrates automated attendance, RFID card scanners, and live check-in telemetry fields into a unified digital station.",
       benefits: [
@@ -168,7 +168,7 @@ export default function ITSolutions() {
           <h1 className="text-4xl sm:text-5xl font-black tracking-tight text-red-600 leading-none">
             IT & Software Solutions
           </h1>
-          <p className="text-sm text-zinc-500 leading-relaxed font-light mt-1">
+          <p className="text-[15px] text-zinc-500 leading-relaxed font-semibold mt-1">
             We develop simple, human-friendly tools to cut down administrative latency. Experience our integrated software modules and request custom enquiries below.
           </p>
         </div>
@@ -184,7 +184,7 @@ export default function ITSolutions() {
             <h2 className="text-3xl font-black text-zinc-950 tracking-tight leading-none">
               Offered Softwares
             </h2>
-            <p className="text-sm text-zinc-500 leading-relaxed font-light mt-1">
+            <p className="text-[15px] text-zinc-500 leading-relaxed font-semibold mt-1">
               Explore our core suite of proprietary technologies. Hover or tap on any node to review system descriptions, capabilities, and pre-integrated features.
             </p>
           </div>
@@ -269,7 +269,7 @@ export default function ITSolutions() {
                           <h4 className="text-sm font-bold text-zinc-900 leading-snug">
                             {ser.name}
                           </h4>
-                          <p className="text-xs text-zinc-405 font-light mt-0.5 leading-none">
+                          <p className="text-[13px] text-zinc-405 font-semibold mt-0.5 leading-none">
                             {ser.subtext}
                           </p>
                         </div>
@@ -296,7 +296,7 @@ export default function ITSolutions() {
                           transition={{ duration: 0.2 }}
                           className="overflow-hidden border-t border-zinc-100 pt-3 flex flex-col gap-2.5"
                         >
-                          <p className="text-xs text-zinc-500 font-light leading-relaxed">
+                          <p className="text-[13px] text-zinc-500 font-semibold leading-relaxed">
                             {ser.description}
                           </p>
                           <div className="flex flex-wrap gap-x-4 gap-y-1.5 pt-1">

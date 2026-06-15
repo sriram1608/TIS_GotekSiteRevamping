@@ -63,7 +63,7 @@ export default function About() {
             </h1>
           </ScrollReveal>
           <ScrollReveal delay={0.3} id="about-intro-summary">
-            <p className="text-base sm:text-lg text-zinc-600 leading-relaxed max-w-2xl mt-3 font-normal">
+            <p className="text-base sm:text-lg text-zinc-600 leading-relaxed max-w-2xl mt-3 font-medium">
               Gotek provides printing and corporate solutions to support your business operations. We specialize in high-quality employee ID cards, lanyards, RFID credentials, corporate gifting, and software solutions designed to simplify everyday business processes.
             </p>
           </ScrollReveal>
@@ -94,7 +94,7 @@ export default function About() {
                   <h3 className="text-xl md:text-2xl font-black text-blue-600 tracking-tight">
                     Printing and Corporate Gifting
                   </h3>
-                  <p className="text-sm text-zinc-650 leading-relaxed font-light">
+                  <p className="text-[15px] text-zinc-650 leading-relaxed font-medium">
                     We create custom ID cards, RFID access cards, and personalized lanyards for businesses. With all printing done in-house, we deliver quality products at affordable prices with fast delivery.
                   </p>
                 </motion.div>
@@ -114,7 +114,7 @@ export default function About() {
                   <h3 className="text-xl md:text-2xl font-black text-red-600 tracking-tight">
                     IT & Software Solutions
                   </h3>
-                  <p className="text-sm text-zinc-655 leading-relaxed font-light font-sans">
+                  <p className="text-[15px] text-zinc-655 leading-relaxed font-medium font-sans">
                     We provide Smart AI Campus solutions with school management and automatic attendance tracking. We also create customized e-commerce websites and online stores to help businesses grow online.
                   </p>
                 </motion.div>
@@ -145,7 +145,7 @@ export default function About() {
                   <h4 className="text-lg font-bold text-zinc-900 tracking-tight">
                     Our Vision
                   </h4>
-                  <p className="text-xs text-zinc-500 font-light mt-1 leading-relaxed text-justify">
+                  <p className="text-sm text-zinc-500 font-semibold mt-1 leading-relaxed text-justify">
                     To lead India in organizational innovation, providing every institution and corporate entity the intelligence to manage and the identity—through premium printing and gifting—to inspire.
                   </p>
                 </div>
@@ -162,7 +162,7 @@ export default function About() {
                   <h4 className="text-lg font-bold text-zinc-900 tracking-tight">
                     Our Mission
                   </h4>
-                  <p className="text-xs text-zinc-500 font-light mt-1 leading-relaxed text-justify">
+                  <p className="text-sm text-zinc-500 font-semibold mt-1 leading-relaxed text-justify">
                     To simplify organizational success by merging our AI Division's intelligence with excellence in printing and gifting. We leverage in-house production and SMART technology to deliver seamless, data-driven identity solutions with unmatched precision.
                   </p>
                 </div>
@@ -179,12 +179,12 @@ export default function About() {
                   <h4 className="text-lg font-bold text-zinc-900 tracking-tight">
                     Our Values
                   </h4>
-                  <p className="text-xs text-zinc-500 font-light mt-1 leading-relaxed text-justify">
-                    • Respect for all<br /><br />
-                    • Teamwork based on trust &amp; collaboration<br /><br />
-                    • Efficient, ethical, transparent &amp; truthful business practices<br /><br />
-                    • Focus on customer delight
-                  </p>
+                  <ul className="text-sm text-zinc-500 font-semibold mt-2 leading-relaxed flex flex-col gap-1.5 text-left">
+                    <li>• Respect for all</li>
+                    <li>• Teamwork based on trust &amp; collaboration</li>
+                    <li>• Efficient, ethical, transparent &amp; truthful business practices</li>
+                    <li>• Focus on customer delight</li>
+                  </ul>
                 </div>
               </TiltCard>
             </ScrollReveal>
@@ -219,7 +219,7 @@ export default function About() {
                     ))}
                   </div>
                   <h3 className="text-base font-bold text-zinc-900">128 Verified Google Reviews</h3>
-                  <p className="text-[11px] text-zinc-400 font-medium">99% Customer loyalty & satisfaction rating</p>
+                  <p className="text-xs text-zinc-400 font-medium">99% Customer loyalty & satisfaction rating</p>
                 </div>
               </div>
 
@@ -237,7 +237,7 @@ export default function About() {
                   key={rev.id}
                   className="p-6 bg-[#fcfbfa] border border-zinc-200 hover:border-blue-600 transition-all flex flex-col justify-between gap-6 hover:shadow-xs"
                 >
-                  <p className="text-xs text-zinc-650 leading-relaxed font-normal italic">
+                  <p className="text-[13px] text-zinc-650 leading-relaxed font-medium italic">
                     "{rev.text}"
                   </p>
 
@@ -249,7 +249,7 @@ export default function About() {
                       </div>
                       <div className="flex flex-col">
                         <span className="text-xs font-bold text-zinc-900 leading-none">{rev.name}</span>
-                        <span className="text-[10px] text-zinc-400 mt-1">{rev.role}</span>
+                        <span className="text-[11px] font-medium text-zinc-400 mt-1">{rev.role}</span>
                       </div>
                     </div>
 
@@ -259,7 +259,7 @@ export default function About() {
                           <Star key={idx} className="w-3 h-3 fill-amber-500 text-amber-500" />
                         ))}
                       </div>
-                      <span className="text-[9px] text-zinc-400 mt-1">{rev.date}</span>
+                      <span className="text-[10px] font-medium text-zinc-400 mt-1">{rev.date}</span>
                     </div>
                   </div>
                 </div>
