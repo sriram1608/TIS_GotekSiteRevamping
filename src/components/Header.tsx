@@ -72,8 +72,8 @@ export default function Header() {
         >
           <button
             className={`px-3 py-2 transition-colors flex items-center gap-1 ${location.pathname === "/manufacturing" || location.pathname === "/it-solutions"
-                ? "text-blue-600 font-extrabold"
-                : "text-zinc-650 hover:text-blue-600"
+              ? "text-blue-600 font-extrabold"
+              : "text-zinc-650 hover:text-blue-600"
               }`}
             data-cursor="pointer"
           >
@@ -239,7 +239,7 @@ export default function Header() {
                   to="/manufacturing"
                   className="p-3 border border-zinc-200 hover:border-blue-600 bg-zinc-50 hover:bg-white flex flex-col gap-1"
                 >
-                  <span className="font-sans text-xs font-bold text-blue-600">Printing and Corporate Solution</span>
+                  <span className="font-sans text-xs font-bold text-blue-600">Printing and Corporate Gifting</span>
                 </Link>
                 <Link
                   to="/it-solutions"
