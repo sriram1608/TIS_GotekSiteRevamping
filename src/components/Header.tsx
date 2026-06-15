@@ -72,8 +72,8 @@ export default function Header() {
         >
           <button
             className={`px-3 py-2 transition-colors flex items-center gap-1 ${location.pathname === "/manufacturing" || location.pathname === "/it-solutions"
-              ? "text-blue-600 font-extrabold"
-              : "text-zinc-650 hover:text-blue-600"
+                ? "text-blue-600 font-extrabold"
+                : "text-zinc-650 hover:text-blue-600"
               }`}
             data-cursor="pointer"
           >
@@ -95,7 +95,7 @@ export default function Header() {
                 className="absolute left-0 top-full pt-4 w-[480px] z-50 pointer-events-auto"
               >
                 <div className="bg-white border border-zinc-200 p-5 shadow-xl grid grid-cols-2 gap-4">
-                  {/* Printing and Corporate Gifting - Blue highlight */}
+                  {/* Printing and Corporate Solution - Blue highlight */}
                   <Link
                     to="/manufacturing"
                     className="p-4 border border-zinc-100 hover:border-blue-600 hover:bg-zinc-50 transition-all flex flex-col items-start gap-2.5 text-left"
@@ -106,7 +106,7 @@ export default function Header() {
                     </div>
                     <div>
                       <h4 className="font-sans text-sm font-bold text-blue-600 tracking-tight">
-                        Printing and Corporate Gifting
+                        Printing and Corporate Solution
                       </h4>
                       <p className="font-sans text-[11px] text-zinc-500 font-light mt-1 leading-normal">
                         Custom ID cards, lanyard printing, RFID cards, and corporate gifting.
