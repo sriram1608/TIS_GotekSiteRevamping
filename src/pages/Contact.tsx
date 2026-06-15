@@ -78,7 +78,7 @@ export default function Contact() {
               <h1 className="font-sans text-4xl sm:text-5xl font-black text-zinc-900 leading-none mt-2">
                 Get in <span className="text-blue-600">Touch</span>
               </h1>
-              <p className="text-sm text-zinc-500 font-light max-w-lg">
+              <p className="text-[15px] text-zinc-500 font-semibold max-w-lg">
                 Contact us to discuss your printing, corporate gifting, or software requirements. We’ll help you find the best solution for your business needs.
               </p>
             </div>
@@ -104,9 +104,9 @@ export default function Contact() {
 
                 <div className="flex flex-col">
                   <h3 className="font-sans text-lg font-bold text-zinc-900">
-                    Golden Tech
+                    GOLDEN TEC
                   </h3>
-                  <span className="text-xs text-zinc-400 mt-1">Corporate Office & Manufacturing HQ</span>
+                  <span className="text-[13px] font-semibold text-zinc-400 mt-1">Corporate Office & Manufacturing HQ</span>
                 </div>
 
                 {/* Info List */}
@@ -118,7 +118,7 @@ export default function Contact() {
                       <h4 className="font-sans text-sm font-bold text-zinc-900">
                         Register Office Location
                       </h4>
-                      <p className="text-xs leading-relaxed font-light">
+                      <p className="text-[13px] leading-relaxed font-semibold">
                         O.No. 166/1, N.N. 317/1, Konnur High Road, Ayanavaram, Chennai-600023. Landmark: Noor Hotel Bus Stop.
                       </p>
                     </div>
@@ -147,7 +147,7 @@ export default function Contact() {
                         Email Address
                       </h4>
                       <div className="flex flex-col font-mono text-xs font-bold gap-1">
-                        <a href="mailto:gotekid@gmail.com" className="hover:text-blue-600 transition-colors">gotekid@gmail.com</a>
+                        <a href="mailto:Info@goldenid.com" className="hover:text-blue-600 transition-colors">Info@goldenid.com</a>
                       </div>
                     </div>
                   </div>
@@ -187,7 +187,7 @@ export default function Contact() {
                   <form onSubmit={handleContactSubmit} className="flex flex-col gap-4">
 
                     <div className="flex flex-col gap-1.5">
-                      <span className="font-mono text-[9px] text-blue-600 font-bold tracking-widest leading-none">REGISTRATION PROTOCOL</span>
+                      <span className="font-mono text-[9px] text-blue-600 font-bold tracking-widest leading-none">BUSINESS ENQUIRY</span>
                       <h3 className="font-sans text-xl font-bold text-zinc-900">
                         Inquiry Specification Form
                       </h3>

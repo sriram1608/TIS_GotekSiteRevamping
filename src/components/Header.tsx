@@ -112,7 +112,7 @@ export default function Header() {
                         <h4 className="font-sans text-sm font-bold text-blue-600 tracking-tight">
                           Printing and Corporate Solution
                         </h4>
-                        <p className="font-sans text-[11px] text-zinc-500 font-light mt-1 leading-normal">
+                        <p className="font-sans text-xs text-zinc-500 font-medium mt-1 leading-normal">
                           Custom ID cards, lanyard printing, RFID cards, and corporate gifting.
                         </p>
                       </div>
@@ -131,7 +131,7 @@ export default function Header() {
                         <h4 className="font-sans text-sm font-bold text-red-600 tracking-tight">
                           IT & Software Solutions
                         </h4>
-                        <p className="font-sans text-[11px] text-zinc-500 font-light mt-1 leading-normal">
+                        <p className="font-sans text-xs text-zinc-500 font-medium mt-1 leading-normal">
                           Smart AI Campus (SAC), custom software development, and online retail stores.
                         </p>
                       </div>

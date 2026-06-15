@@ -46,7 +46,7 @@ export default function Careers() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.2} id="careers-desc">
-          <p className="text-sm text-zinc-500 leading-relaxed font-light max-w-3xl mt-1">
+          <p className="text-[15px] text-zinc-500 leading-relaxed font-medium max-w-3xl mt-1">
             Join our growing team and build innovative solutions with us. We welcome skilled professionals in software development, IT support, printing operations, and business services. Submit your application below to explore career opportunities at Gotek.
           </p>
         </ScrollReveal>
@@ -69,7 +69,7 @@ export default function Careers() {
                 <h3 className="text-xl font-bold text-white tracking-tight">
                   Printing & Corporate Solutions
                 </h3>
-                <p className="text-xs text-zinc-400 mt-1 font-light">
+                <p className="text-[13px] text-zinc-400 mt-1 font-semibold">
                   In-house precision printing, smart identity systems, and custom corporate gifting products.
                 </p>
               </div>
@@ -92,7 +92,7 @@ export default function Careers() {
                     <h4 className="text-lg font-bold text-white tracking-tight transition-colors group-hover:text-blue-400">
                       {job.title}
                     </h4>
-                    <p className="text-xs text-zinc-300/90 leading-relaxed font-light">
+                    <p className="text-[13px] text-zinc-300/90 leading-relaxed font-semibold">
                       {jobDescriptions[job.id] || "Ensure high standards in our custom fabrication and advanced material printing processes."}
                     </p>
                   </div>
@@ -130,7 +130,7 @@ export default function Careers() {
                 <h3 className="text-xl font-bold text-zinc-900 tracking-tight">
                   IT & Software Solutions
                 </h3>
-                <p className="text-xs text-zinc-400 mt-1 font-light">
+                <p className="text-[13px] text-zinc-500 mt-1 font-semibold">
                   Empowering organizations with smart technology, automation, and digital transformation.
                 </p>
               </div>
@@ -153,7 +153,7 @@ export default function Careers() {
                     <h4 className="text-lg font-bold text-zinc-900 tracking-tight transition-colors group-hover:text-red-600">
                       {job.title}
                     </h4>
-                    <p className="text-xs text-zinc-500 leading-relaxed font-light">
+                    <p className="text-[13px] text-zinc-600 leading-relaxed font-semibold">
                       {jobDescriptions[job.id] || "Join our team and work on bleeding-edge solutions with robust career growth opportunities."}
                     </p>
                   </div>
@@ -194,13 +194,13 @@ export default function Careers() {
                 <h3 className="text-2xl md:text-3xl font-black tracking-tight leading-none mt-1">
                   Submit Unsolicited Portfolio
                 </h3>
-                <p className="text-xs text-zinc-300 leading-relaxed font-light mt-1">
+                <p className="text-[13px] text-zinc-300 leading-relaxed font-medium mt-1">
                   Don't see a current active opening that fits your expertise? Send your CV and cover details to our hiring panel anyway. We always explore fresh talent portfolios.
                 </p>
                 
                 <div className="flex items-center gap-2 mt-3 text-xs font-mono font-bold text-blue-400">
                   <Mail className="w-4 h-4" />
-                  <span>Email: careers@goteksystems.com</span>
+                  <span>Email: Hr@gotekid.com</span>
                 </div>
               </div>
 

@@ -35,7 +35,7 @@ export default function Footer() {
               </Link>
             </div>
             
-            <p className="font-space text-xs text-zinc-500 leading-relaxed font-light max-w-sm">
+            <p className="font-space text-sm md:text-base lg:text-lg text-zinc-600 font-medium leading-[1.75] max-w-sm">
               Gotek provides custom ID cards, RFID solutions, corporate lanyards, and printing services for businesses. Our in-house production ensures quality, affordability, and dependable service for every order.
             </p>
           </div>
@@ -53,25 +53,29 @@ export default function Footer() {
               {/* Postal Address */}
               <div className="flex gap-3 hover:text-accent transition-colors">
                 <MapPin className="w-4 h-4 text-accent shrink-0 mt-0.5" />
-                <p className="font-sans text-xs text-zinc-500 leading-relaxed font-light">
-                  O.No. 166/1, N.N. 317/1, Konnur High Road, Ayanavaram, Chennai-600023. Landmark: Noor Hotel Bus Stop.
+                <p className="font-sans text-[13px] md:text-sm lg:text-[15px] text-zinc-700 font-medium leading-[1.8]">
+                  O.No. 166/1, N.N. 317/1,<br />
+                  Konnur High Road,<br />
+                  Ayanavaram,<br />
+                  Chennai – 600023.<br />
+                  Landmark: Noor Hotel Bus Stop.
                 </p>
               </div>
 
               {/* Telephone numbers */}
               <div className="flex gap-3 text-zinc-500 font-mono text-xs">
                 <Phone className="w-4 h-4 text-accent shrink-0 mt-0.5" />
-                <div className="flex flex-col gap-1 font-bold">
+                <div className="flex flex-col gap-1 font-semibold">
                   <a href="tel:04442160975" className="hover:text-accent transition-colors">044 – 4216 0975</a>
                   <a href="tel:+919840330975" className="hover:text-accent transition-colors">+91 9840330975</a>
                 </div>
               </div>
 
               {/* Email address Link */}
-              <div className="flex gap-3 text-zinc-500 font-mono text-xs">
+              <div className="flex gap-3 text-zinc-500 font-mono text-[13px]">
                 <Mail className="w-4 h-4 text-accent shrink-0 mt-0.5" />
-                <a href="mailto:gotekid@gmail.com" className="hover:text-accent font-bold transition-colors">
-                  gotekid@gmail.com
+                <a href="mailto:Info@goldenid.com" className="hover:text-accent font-bold transition-colors">
+                  Info@goldenid.com
                 </a>
               </div>
             </div>
@@ -83,10 +87,11 @@ export default function Footer() {
             {/* Sub-column 3A: ID Solutions / IT */}
             <div className="flex flex-col gap-4">
               <span className="font-mono text-[9px] text-zinc-400 tracking-[2px] uppercase font-bold">
-                ID SOLUTIONS
+                IT SOLUTIONS
               </span>
               <div className="flex flex-col gap-2.5 font-mono text-[10px] text-zinc-500 uppercase font-semibold">
-                <Link to="/it-solutions" className="hover:text-accent transition-colors">Smart Campus (SAC)</Link>
+                <Link to="/it-solutions" className="hover:text-accent transition-colors">ID Card and Lanyard Cropping Tool</Link>
+                <Link to="/it-solutions" className="hover:text-accent transition-colors">Smart Ai Campus (SAC)</Link>
                 <Link to="/it-solutions" className="hover:text-accent transition-colors">E-Commerce</Link>
               </div>
             </div>

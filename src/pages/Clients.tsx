@@ -22,12 +22,12 @@ export default function Clients() {
 
           <ScrollReveal delay={0.1} id="clients-title">
             <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-zinc-900 leading-[0.95]">
-              Our Valued <span className="text-accent">Clientele</span>
+              <span className="text-accent">Clientele</span>
             </h1>
           </ScrollReveal>
 
           <ScrollReveal delay={0.2} id="clients-desc">
-            <p className="font-space text-sm text-zinc-650 leading-relaxed font-light max-w-2xl">
+            <p className="font-space text-[15px] text-zinc-650 leading-relaxed font-semibold max-w-2xl">
               Our solutions are trusted by businesses, schools, and organizations looking for high-quality printing, smart ID cards, RFID access systems, asset tracking, and custom software services.
             </p>
           </ScrollReveal>
