@@ -72,8 +72,8 @@ export default function Header() {
         >
           <button
             className={`px-3 py-2 transition-colors flex items-center gap-1 ${location.pathname === "/manufacturing" || location.pathname === "/it-solutions"
-                ? "text-blue-600 font-extrabold"
-                : "text-zinc-650 hover:text-blue-600"
+              ? "text-blue-600 font-extrabold"
+              : "text-zinc-650 hover:text-blue-600"
               }`}
             data-cursor="pointer"
           >
@@ -106,7 +106,7 @@ export default function Header() {
                     </div>
                     <div>
                       <h4 className="font-sans text-sm font-bold text-blue-600 tracking-tight">
-                        Printing and Corporate Solution
+                        Printing and Corporate Gifting
                       </h4>
                       <p className="font-sans text-[11px] text-zinc-500 font-light mt-1 leading-normal">
                         Custom ID cards, lanyard printing, RFID cards, and corporate gifting.
