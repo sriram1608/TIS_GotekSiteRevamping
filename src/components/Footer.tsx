@@ -74,8 +74,8 @@ export default function Footer() {
               {/* Email address Link */}
               <div className="flex gap-3 text-zinc-500 font-mono text-[13px]">
                 <Mail className="w-4 h-4 text-accent shrink-0 mt-0.5" />
-                <a href="mailto:Info@goldenid.com" className="hover:text-accent font-bold transition-colors">
-                  Info@goldenid.com
+                <a href="mailto:info@gotekid.com" className="hover:text-accent font-bold transition-colors">
+                  info@gotekid.com
                 </a>
               </div>
             </div>

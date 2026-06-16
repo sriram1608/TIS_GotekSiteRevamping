@@ -118,7 +118,7 @@ export default function CareersApply() {
                 Our recruitment team will review your credentials and contact you within 48 business hours if there is alignment.
               </p>
               
-              <div className="p-5 bg-zinc-50 border border-zinc-200 font-sans text-xs text-left text-zinc-600 flex flex-col gap-2.5 w-full max-w-md">
+              <div className="p-5 bg-zinc-50 border border-zinc-200 font-sans text-xs font-bold text-left text-zinc-600 flex flex-col gap-2.5 w-full max-w-md">
                 <span className="font-semibold text-zinc-800">Submitted Details:</span>
                 <span>• Name: {fullName}</span>
                 <span>• Position: {extractPositionTitle(position)}</span>
@@ -126,7 +126,7 @@ export default function CareersApply() {
                 <span>• Resume: {resumeUrl || "Not provided"}</span>
               </div>
 
-              <p className="text-xs text-zinc-400">A confirmation email has been sent to <strong>{email}</strong>.</p>
+              <p className="text-xs text-zinc-400 font-bold">A confirmation email has been sent to <strong>{email}</strong>.</p>
 
               <Link
                 to="/careers"

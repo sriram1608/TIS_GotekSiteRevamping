@@ -75,79 +75,7 @@ export default function Header() {
               ? "text-blue-600 font-extrabold"
               : "text-zinc-650 hover:text-blue-600"
               }`}
-<<<<<<< HEAD
-              data-cursor="pointer"
-            >
-              Our Solutions
-              <ChevronDown 
-                className={`w-4 h-4 transition-transform duration-300 ${
-                  isSolutionsOpen ? "rotate-180 text-blue-600" : ""
-                }`} 
-                / >
-            </button>
 
-            {/* Dropdown Card Box */}
-            <AnimatePresence>
-              {isSolutionsOpen && (
-                <motion.div
-                  initial={{ opacity: 0, y: 15 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 10 }}
-                  transition={{ duration: 0.2 }}
-                  className="absolute left-0 top-full pt-4 w-[480px] z-50 pointer-events-auto"
-                >
-                  <div className="bg-white border border-zinc-200 p-5 shadow-xl grid grid-cols-2 gap-4">
-                    {/* Printing and Corporate Solution - Blue highlight */}
-                    <Link
-                      to="/manufacturing"
-                      className="p-4 border border-zinc-100 hover:border-blue-600 hover:bg-zinc-50 transition-all flex flex-col items-start gap-2.5 text-left"
-                      data-cursor="expand"
-                    >
-                      <div className="p-2.5 bg-blue-50 border border-blue-200 text-blue-600">
-                        <Printer className="w-5 h-5" />
-                      </div>
-                      <div>
-                        <h4 className="font-sans text-sm font-bold text-blue-600 tracking-tight">
-                          Printing and Corporate Solution
-                        </h4>
-                        <p className="font-sans text-xs text-zinc-500 font-medium mt-1 leading-normal">
-                          Custom ID cards, lanyard printing, RFID cards, and corporate gifting.
-                        </p>
-                      </div>
-                    </Link>
-
-                    {/* IT Solutions - Red highlight */}
-                    <Link
-                      to="/it-solutions"
-                      className="p-4 border border-zinc-100 hover:border-red-600 hover:bg-zinc-50 transition-all flex flex-col items-start gap-2.5 text-left"
-                      data-cursor="expand"
-                    >
-                      <div className="p-2.5 bg-red-50 border border-red-200 text-red-600">
-                        <Monitor className="w-5 h-5" />
-                      </div>
-                      <div>
-                        <h4 className="font-sans text-sm font-bold text-red-600 tracking-tight">
-                          IT & Software Solutions
-                        </h4>
-                        <p className="font-sans text-xs text-zinc-500 font-medium mt-1 leading-normal">
-                          Smart AI Campus (SAC), custom software development, and online retail stores.
-                        </p>
-                      </div>
-                    </Link>
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-
-          {/* Products */}
-          <Link
-            to="/products"
-            className={`px-3 py-2 transition-colors ${
-              location.pathname === "/products" ? "text-blue-600 font-extrabold" : "text-zinc-650 hover:text-blue-600"
-            }`}
-=======
->>>>>>> origin/main
             data-cursor="pointer"
           >
             Our Solutions
@@ -181,7 +109,7 @@ export default function Header() {
                       <h4 className="font-sans text-sm font-bold text-blue-600 tracking-tight">
                         Printing and Corporate Gifting
                       </h4>
-                      <p className="font-sans text-[11px] text-zinc-500 font-light mt-1 leading-normal">
+                      <p className="font-sans text-[11px] text-zinc-500 font-bold mt-1 leading-normal">
                         Custom ID cards, lanyard printing, RFID cards, and corporate gifting.
                       </p>
                     </div>
@@ -200,7 +128,7 @@ export default function Header() {
                       <h4 className="font-sans text-sm font-bold text-red-600 tracking-tight">
                         IT & Software Solutions
                       </h4>
-                      <p className="font-sans text-[11px] text-zinc-500 font-light mt-1 leading-normal">
+                      <p className="font-sans text-[11px] text-zinc-500 font-bold mt-1 leading-normal">
                         Smart AI Campus (SAC), custom software development, and online retail stores.
                       </p>
                     </div>
