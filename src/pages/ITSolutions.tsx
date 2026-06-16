@@ -343,7 +343,7 @@ export default function ITSolutions() {
               <div className="py-10 text-center flex flex-col items-center gap-3">
                 <CheckCircle className="w-12 h-12 text-emerald-500 animate-bounce" />
                 <h4 className="text-lg font-bold text-zinc-900">Enquiry Sent</h4>
-                <p className="text-xs text-zinc-500 max-w-sm">
+                <p className="text-xs text-zinc-500 font-bold max-w-sm">
                   We've logged your credentials. A support liaison will touch base regarding your chosen software: <span className="font-bold text-red-600">{enquirySoftware}</span>.
                 </p>
               </div>

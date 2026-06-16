@@ -200,7 +200,7 @@ export default function Careers() {
                 
                 <div className="flex items-center gap-2 mt-3 text-xs font-mono font-bold text-blue-400">
                   <Mail className="w-4 h-4" />
-                  <span>Email: Hr@gotekid.com</span>
+                  <span>Email: hr@gotekid.com</span>
                 </div>
               </div>
 

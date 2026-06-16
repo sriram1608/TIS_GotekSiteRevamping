@@ -147,7 +147,7 @@ export default function Contact() {
                         Email Address
                       </h4>
                       <div className="flex flex-col font-mono text-xs font-bold gap-1">
-                        <a href="mailto:Info@goldenid.com" className="hover:text-blue-600 transition-colors">Info@goldenid.com</a>
+                        <a href="mailto:info@gotekid.com" className="hover:text-blue-600 transition-colors">info@gotekid.com</a>
                       </div>
                     </div>
                   </div>
@@ -172,7 +172,7 @@ export default function Contact() {
                     <h3 className="font-sans text-xl font-bold text-zinc-900 tracking-tight">
                       Message Submitted Successfully
                     </h3>
-                    <p className="text-xs text-zinc-500 max-w-sm leading-relaxed mt-1">
+                    <p className="text-xs text-zinc-500 font-bold max-w-sm leading-relaxed mt-1">
                       Your inquiry has been cataloged. Our liaison will follow up with you within 8 business hours.
                     </p>
                     <button

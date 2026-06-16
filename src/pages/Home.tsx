@@ -18,17 +18,8 @@ export default function Home() {
         transition={{ type: "spring", damping: 30, stiffness: 70 }}
         className="relative flex-1 group overflow-hidden border-b lg:border-b-0 lg:border-r border-zinc-800 min-h-[50vh] lg:min-h-screen flex flex-col justify-start p-8 md:p-14 lg:p-16"
       >
-        {/* Animated Printing Press/Material Background */}
-        <motion.div
-          className="absolute inset-0 bg-cover bg-center opacity-85 group-hover:opacity-95 transition-opacity"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?w=1200&auto=format&fit=crop&q=80')`,
-          }}
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
-        />
-        {/* Balanced Gradient Overlay for beautiful visibility and clean text contrast at the top */}
-        <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/90 via-zinc-950/50 to-zinc-950 z-[1]" />
+        {/* Premium Charcoal-Black Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1b1b1b] to-[#161616] z-[1]" />
 
         {/* Content area */}
         <div className="relative z-[2] flex flex-col items-start gap-4 text-white max-w-lg">
@@ -113,7 +104,7 @@ export default function Home() {
             IT & Software <span className="text-red-400">Solutions</span>
           </h2>
 
-          <p className="text-sm text-zinc-300 leading-relaxed font-light mt-1">
+          <p className="text-sm text-zinc-300 leading-relaxed font-bold mt-1">
             Empowering organizations with smart technology, automation, and digital transformation.
           </p>
 
@@ -124,7 +115,7 @@ export default function Home() {
               "Custom Software Development",
               "E-Commerce & Online Stores"
             ].map((text) => (
-              <li key={text} className="flex items-center gap-2 text-xs text-zinc-300 font-medium">
+              <li key={text} className="flex items-center gap-2 text-xs text-zinc-300 font-bold">
                 <CheckCircle2 className="w-3.5 h-3.5 text-red-400 shrink-0" />
                 <span>{text}</span>
               </li>
